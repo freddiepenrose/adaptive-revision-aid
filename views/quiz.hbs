@@ -1,0 +1,67 @@
+<html>
+
+<head>
+    <!-- Making website responsive -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Linking the JavaScript file -->
+    <script src="script.js"></script>
+    <!-- Title of the webpage -->
+    <title>Quiz</title>
+</head>
+
+<body>
+    <!-- The navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/quiz"><u>Quiz</u></a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup">Signup</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="quiz-container">
+
+        <!-- Question container -->
+        <div class="question-container">
+            <h2 data-questionid="{{ questionData.questionID }}">{{ questionData.question }}</h2>
+            <button class="answer-button">{{ questionData.answer1 }}</button>
+            <button class="answer-button">{{ questionData.answer2 }}</button>
+            <button class="answer-button">{{ questionData.answer3 }}</button>
+            <button class="answer-button">{{ questionData.answer4 }}</button>
+            <button class="not-sure-button">I don't know</button>
+            <button class="next-button">Next</button>
+        </div>
+
+        <!-- Question info container -->
+        <div class="question-info-container">
+            <h2>Question Information</h2>
+            <div class="question-info-grid">
+                <div class="question-info-item">
+                    <strong>Topic Name:</strong><br>
+                    {{ questionData.topicName }}
+                </div>
+                <div class="question-info-item">
+                    <strong>Topic ID:</strong><br>
+                    {{ questionData.topicID }}
+                </div>
+                <div class="question-info-item">
+                    <strong>Times Answered:</strong><br>
+                    {{ questionData.timesAnswered }}
+                </div>
+                <div class="question-info-item">
+                    <strong>Accuracy:</strong><br>
+                    {{ questionData.accuracy }}
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

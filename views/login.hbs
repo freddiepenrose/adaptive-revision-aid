@@ -1,0 +1,44 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title of the webpage -->
+    <title>Login</title>
+</head>
+
+<body>
+    <!-- The navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/login"><u>Login</u></a></li>
+            <li><a href="/signup">Signup</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="authentication-container">
+        <h1>Login</h1>
+
+        <form action="/login" method="post">
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Your Email"><br>
+
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Your Password"><br>
+
+            <label for="isParent">I am a parent</label>
+            <input type="checkbox" name="isParent" id="isParent" value="true"><br>
+            {{#if error}}
+            <p style="color: red;">{{error}}</p>
+            {{/if}}
+            <button type="submit" class="authentication-button">Login</button>
+        </form>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+/* Body */
+
+body {
+    font-family: Arial, Verdana, Verdana;
+    margin: 0; /* Remove default margin*/
+    background-color: #f4f4f4; /* Off white colour */
+}
+
+/* Navigation Bar */
+
+nav {
+    background-color: #35605A; /* Set the background colour of navigation bar */
+}
+
+nav ul {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    overflow: hidden; /* Ensure content in the nav doesn't overflow */
+    list-style-type: none; /* Removes the bullet points from the list */
+}
+
+nav li a {
+    float: left; /* Move list items to the same line and floats them to the left */
+    display: block; /* Display items as block elements */
+    color: white; /* Set font colour to white */
+    padding: 15px 15px; /* Add padding to each item */
+    text-decoration: none /* Remove underline from the links */
+}
+
+nav li a:hover {
+    background-color: #478179; /* Change background colour on hover */
+}
+
+/* Homepage */
+
+.homepage-info-container {
+    text-align: center; /* Move text to the centre of page */
+    padding: 50px 5px;  /*  Move the containter lower down the page */
+}
+
+.homepage-links {
+    padding: 20px; /* Increase space around elements inside container */
+}
+
+.homepage-link {
+    background-color: #35605A;
+    color: white;
+    text-decoration: none; /* Removes any styling from the links */
+    padding: 10px 20px; /* Adding space between text and border */
+    margin-right: 10px; /* Adding a gap between buttons */
+    border-radius: 5px; /* Rounding the buttons corners */
+}
+
+.homepage-link:hover {
+    background-color: #478179; /* Background changes on hover */
+}
+
+/* Quiz Page */
+
+.quiz-container {
+    display: flex; /* Create a flex container */
+    flex-wrap: wrap; /* Allows containers to wrap to next line if needed */
+}
+
+.question-container,
+.question-info-container {
+    width: calc(50% - 40px); /* Each container takes half of the width */
+    padding: 20px ; /* Add padding inside containers */
+    background-color: white; /* Make container stand out */
+    border-radius: 5px; /* Round the corners of the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    box-sizing: border-box; /* Includes padding and border in element size */
+    margin: 20px; /* Adding a margin around containers */
+}
+
+@media (max-width: 600px) { /* For screens that are 600px or less */
+    .question-container,
+    .question-info-container {
+        width: 100%; /* Make container strech the whole width of page */
+    }
+}
+
+.answer-button {
+    width: 100%; /* Take full width of the container */
+    margin-bottom: 10px; /* Add space between buttons */
+    padding: 10px 20px;
+    background-color: #9CC4B2;
+    border: 2px solid; /* Adding solid border */
+    border-color: #9CC4B2;
+    border-radius: 5px; /* Curving the border edge */
+}
+
+.answer-button:hover {
+    background-color: white;
+}
+
+.not-sure-button {
+    width: 100%; /* Take full width of the container */
+    margin-bottom: 10px; /* Add space between buttons */
+    padding: 10px 20px;
+    background-color: #D5BBB1;
+    border: 2px solid; /* Adding solid border */
+    border-color: #D5BBB1;
+    border-radius: 5px; /* Curving the border edge */
+}
+
+.not-sure-button:hover {
+    background-color: white;
+}
+
+.next-button {
+    width: 100%; /* Take full width of the container */
+    padding: 10px 20px;
+    background-color: #35605A;
+    color: white; /* Make text stand out on background */
+    border: 2px solid; /* Adding solid border */
+    border-color: #35605A;
+    border-radius: 5px; /* Curving the border edge */
+    display: none; /* Initially hide the button */
+}
+
+.disabled-button {
+    pointer-events: none; /* Disable pointer events */
+  }
+
+/* Question info container */
+
+.question-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Splitting grid into two rows */
+    grid-gap: 10px; /* Spacing between each item */
+}
+
+.question-info-item {
+    padding: 10px; 
+    background-color: #f4f4f4; /* Setting background as the off white colour */
+    border-radius: 5px; /* Making the border edges curved */
+}
+
+/* Authentication */
+
+.authentication-container {
+    width: calc(100% - 40px); /* Making container full width of page */
+    padding: 10px; /* Padding inside the container */
+    background-color: white; /* Make container stand out */
+    border-radius: 5px; /* Round the corners of the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    box-sizing: border-box; /* Includes padding and border in element size */
+    margin: 20px auto; /* Adding a margin around containers */
+}
+
+.authentication-container input[type="text"],
+.authentication-container input[type="email"],
+.authentication-container input[type="password"],
+.authentication-container select {
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 5px; /* Have a gap between each input box */
+}
+
+.authentication-button {
+    background-color: #35605A;
+    color: white;
+    padding: 5px 15px; /* Adding space between text and border */
+    margin-right: 10px; /* Adding a gap between buttons */
+    margin-top: 10px; /* Adding a gap bettwen button and input boxes */
+    border: 2px solid; /* Adding solid border */
+    border-color: #35605A;
+    border-radius: 5px; /* Rounding the buttons corners */
+}
+
+
+/* Error handling */
+
+.error-container {
+    width: calc(100% - 40px); /* Making container full width of page */
+    padding: 10px; /* Padding inside the container */
+    background-color: white; /* Make container stand out */
+    border-radius: 5px; /* Round the corners of the container */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    box-sizing: border-box; /* Includes padding and border in element size */
+    margin: 20px auto; /* Adding a margin around containers */
+}
+

@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Linking the CSS file -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Title of the webpage -->
+    <title>Signup</title>
+</head>
+
+<body>
+    <!-- The navigation bar -->
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/quiz">Quiz</a></li>
+            <li><a href="/stats">Stats</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signup"><u>Signup</u></a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <div class="authentication-container">
+        <h1>Signup</h1>
+
+        <form action="/signup" method="POST">
+            <label for="userName">Name</label>
+            <input type="text" name="userName" id="userName" placeholder="Your Name"><br>
+
+            <label for="userEmail">Email</label>
+            <input type="email" name="userEmail" id="userEmail" placeholder="Your Email"><br>
+
+            <label for="userPassword">Password</label>
+            <input type="password" name="userPassword" id="userPassword" placeholder="Your Password"><br>
+
+            <label for="parentName">Parent Name</label>
+            <input type="text" name="parentName" id="parentName" placeholder="Parents Name"><br>
+
+            <label for="parentEmail">Parent Email</label>
+            <input type="email" name="parentEmail" id="parentEmail" placeholder="Parents Email"><br>
+
+            <label for="parentPassword">Parent Password</label>
+            <input type="password" name="parentPassword" id="parnetPassword" placeholder="Parents Password"><br>
+
+            <label for="course">Course</label>
+            <select name="course" id="course">
+                <option value="GCSE_OCR">OCR Computer Science</option>
+            </select><br>
+            {{#if error }}
+            <p style="color: red;">{{ error }}</p>
+            {{/if }}
+            <button type="submit" class="authentication-button">Signup</button>
+        </form>
+    </div>
+</body>
+
+</html>
